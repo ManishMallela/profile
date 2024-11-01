@@ -13,6 +13,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SideNavComponent } from './ui-component/side-nav/side-nav.component';
+import { ThreeEmojiHiComponent } from './three-emoji-hi/three-emoji-hi.component';
+
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { SideNavComponent } from './ui-component/side-nav/side-nav.component';
     FooterComponent,
     BodyComponent,
     ContainerComponent,
+    ThreeEmojiHiComponent,
   ],
   imports: [
     BrowserModule,

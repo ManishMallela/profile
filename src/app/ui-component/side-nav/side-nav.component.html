@@ -4,6 +4,14 @@
     <div [@increaseSpacing]="animationState">
       <span *ngFor="let word of words" class="word example-app-name"> {{ word }}</span>
     </div>
+
+    <div class="example-button-container">
+      <a href="assets/files/Manish_Mallela.docx" download="Manish_Mallela.docx"> <button mat-fab extended>
+          <mat-icon>cloud_download</mat-icon>
+          Download Resume
+        </button></a>
+
+    </div>
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
