@@ -12,6 +12,6 @@ export class AppComponent {
   constructor(private titleService: Title) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Manish Mallela | Full Stack Developer');
+    this.titleService.setTitle('Manish | Full Stack Developer');
   }
 }
