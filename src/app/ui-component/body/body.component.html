@@ -1,3 +1,15 @@
-<div [@fadeInSequence]="animationState" class="center">
+<!-- <div [@fadeInSequence]="animationState" class="center">
   <span *ngFor="let word of words" class="word">{{ word }}</span>
+</div> -->
+<div class="container">
+  <div class="left-section" *ngIf="true" @downSlide>
+    <h1>
+      MALLELA <span>MANISH</span>
+    </h1>
+    <p>Software Engineer</p>
+    <a href="#" class="button">GET IN TOUCH</a>
+  </div>
+  <div class="right-section" *ngIf="true" @downSlide>
+    <img src="assets/images/profile-.jpg" alt="Profile Image">
+  </div>
 </div>
