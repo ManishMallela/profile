@@ -6,7 +6,13 @@
     <h1>
       MALLELA MANISH
     </h1>
-    <p>Software Engineer | Full Stack Developer</p>
+    <!-- <p>Software Engineer | Full Stack Developer</p> -->
+    <div class="title-container">
+      <p>
+        <span>Software Engineer | </span>
+        <span [ngClass]="{ animate: animate }">{{ currentTitle }}</span>
+      </p>
+    </div>
     <a href="#" class="button">GET IN TOUCH</a>
   </div>
   <div class="right-section" *ngIf="true" @downSlide>

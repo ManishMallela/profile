@@ -128,3 +128,34 @@
     padding-left: 0;
   }
 }
+
+.title-container {
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-flex;
+}
+
+.animated-text {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  margin-left: 5px;
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.animate {
+  opacity: 1;
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

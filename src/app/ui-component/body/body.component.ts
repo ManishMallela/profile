@@ -56,4 +56,24 @@ export class BodyComponent {
       this.animationState = !this.animationState; // Toggle the animation state
     }, 6000); // Adjust interval to match the total animation duration
   }
+
+  titles = ['Full Stack Developer', 'AWS', 'Github Copilot'];
+  currentTitle = '';
+  animate = false;
+  private titleIndex = 0;
+
+  ngOnInit(): void {
+    this.startTitleAnimation();
+  }
+
+  startTitleAnimation() {
+    setInterval(() => {
+      this.animate = false;
+      setTimeout(() => {
+        this.currentTitle = this.titles[this.titleIndex];
+        this.animate = true;
+        this.titleIndex = (this.titleIndex + 1) % this.titles.length;
+      }, 100); // short delay to reset the animation
+    }, 2000); // delay for each title
+  }
 }
