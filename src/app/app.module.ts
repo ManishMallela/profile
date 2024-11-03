@@ -13,8 +13,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SideNavComponent } from './ui-component/side-nav/side-nav.component';
+import { MatCardModule } from '@angular/material/card';
 
 import { MatDividerModule } from '@angular/material/divider';
+import { ProjectsComponent } from './ui-component/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { MatDividerModule } from '@angular/material/divider';
     FooterComponent,
     BodyComponent,
     ContainerComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

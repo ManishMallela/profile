@@ -1,0 +1,96 @@
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 300px;
+  position: relative;
+}
+
+mat-card {
+  min-width: 100%;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: none;
+  position: absolute;
+}
+
+mat-card.active {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+  position: relative;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  cursor: pointer;
+}
+
+.prev-button {
+  left: -100px;
+}
+
+.next-button {
+  right: -100px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.indicator {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.indicator {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5); /* Light grey by default */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: rgba(255, 255, 255, 0.9); /* Brighter color when active */
+}

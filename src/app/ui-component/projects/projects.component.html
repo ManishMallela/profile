@@ -1,0 +1,27 @@
+<div class="carousel-container" (mouseenter)="clearAutoplay()" (mouseleave)="startAutoplay()">
+  <button mat-icon-button class="prev-button" (click)="prevSlide()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <div class="carousel-wrapper">
+    <mat-card *ngFor="let item of items; let i = index" [class.active]="i === currentSlide">
+      <mat-card-header>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="item.image" alt="Carousel image {{ i + 1 }}" />
+      <mat-card-content>{{ item.description }}</mat-card-content>
+    </mat-card>
+  </div>
+
+  <button mat-icon-button class="next-button" (click)="nextSlide()">
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+
+  <!-- Carousel indicators -->
+  <div class="carousel-indicators">
+    <span *ngFor="let item of items; let i = index" class="indicator" [class.active]="i === currentSlide"
+      (click)="setSlide(i)">
+      <!-- {{ i + 1 }} Temporarily added for testing -->
+    </span>
+  </div>
+</div>
